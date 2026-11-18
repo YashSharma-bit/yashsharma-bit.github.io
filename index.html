@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yash Sharma | Software Engineer</title>
+<meta name="description" content="Yash Sharma is a Computer Science and Data Science undergraduate in Bengaluru building secure backend services in Java and Python.">
+<meta property="og:title" content="Yash Sharma | Software Engineer">
+<meta property="og:description" content="Secure backend services, full-stack apps and deep learning OCR. Java, Python, Spring Boot, React.">
+<meta name="theme-color" content="#1d2342">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<style>
+:root{--bg:#edf0f5;--ink:#1d2342;--mute:#566086;--line:#c9d0e0;--acc:#2f4bdb;--panel:#fff;--chip:#dfe5f4;--bad:#b3261e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#12162b;--ink:#e6e9f7;--mute:#9aa4cc;--line:#2c3558;--acc:#8fa3ff;--panel:#1a2040;--chip:#252d52;--bad:#ff8a80}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#12162b;--ink:#e6e9f7;--mute:#9aa4cc;--line:#2c3558;--acc:#8fa3ff;--panel:#1a2040;--chip:#252d52;--bad:#ff8a80}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.6 Newsreader,Georgia,serif}
+h1,h2,h3,button,.sans,nav{font-family:"Familjen Grotesk",system-ui,sans-serif}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:230px 1fr;gap:56px}
+aside{position:sticky;top:0;align-self:start;padding:56px 0}
+aside h1{font-size:34px;line-height:1.05;margin:0 0 10px;letter-spacing:-.02em}
+aside p{font-size:16px;color:var(--mute);margin:0 0 22px}
+nav{display:flex;flex-direction:column;gap:4px;font-size:16px}
+nav a{text-decoration:none;color:var(--mute);padding:4px 0 4px 12px;border-left:2px solid var(--line)}
+nav a:hover,nav a.on{color:var(--ink);border-left-color:var(--acc)}
+.ext{margin-top:22px;display:flex;flex-direction:column;gap:4px;font-size:16px}
+#theme{margin-top:22px;background:none;border:1px solid var(--line);color:var(--mute);font-size:14px;padding:5px 10px;border-radius:6px;cursor:pointer}
+main{padding:56px 0 80px;min-width:0}
+section{margin-bottom:56px}
+h2{font-size:26px;margin:0 0 14px;letter-spacing:-.01em}
+h3{font-size:21px;margin:0}
+p{margin:0 0 12px;max-width:62ch}
+.lede{font-size:25px;line-height:1.4;max-width:30em}
+.meta{font-family:"Familjen Grotesk",system-ui,sans-serif;font-size:15px;color:var(--mute);margin:3px 0 10px}
+ul{margin:0;padding-left:20px}li{margin-bottom:6px;max-width:64ch}
+.proj{padding:26px 0;border-top:1px solid var(--line)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+.tags li{margin:0;background:var(--chip);border-radius:5px;padding:2px 9px;font:14px "Familjen Grotesk",system-ui,sans-serif}
+.pipe{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:14px 0 4px;font:14px/1.3 "Familjen Grotesk",system-ui,sans-serif}
+.pipe span{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 10px}
+.pipe i{align-self:center;color:var(--mute);font-style:normal}
+.demo{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+.demo p{font-size:16px;color:var(--mute)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+button.b{font-size:16px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--acc);background:var(--acc);color:var(--bg);cursor:pointer}
+button.alt{background:transparent;color:var(--acc)}
+button:disabled{opacity:.45;cursor:not-allowed}
+#log{font:15px/1.5 ui-monospace,Menlo,Consolas,monospace;min-height:7.5em;margin:0;padding:12px;border-radius:6px;background:var(--bg);overflow-x:auto;white-space:pre-wrap}
+#status{font:16px "Familjen Grotesk",system-ui,sans-serif;margin-top:10px;min-height:1.6em}
+dl{margin:0;display:grid;grid-template-columns:170px 1fr;gap:8px 20px}
+dt{font:700 16px "Familjen Grotesk",system-ui,sans-serif}dd{margin:0;max-width:60ch}
+@media(max-width:820px){.wrap{display:block}aside{position:static;padding:36px 0 0}nav{flex-direction:row;flex-wrap:wrap;gap:6px 16px}nav a{border:0;padding:0}.ext{flex-direction:row;gap:18px}main{padding-top:36px}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:10px}}
+@media print{aside nav,#theme,.demo{display:none}.wrap{display:block}aside{position:static;padding:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside>
+<h1>Yash Sharma</h1>
+<p>Software engineer<br>Bengaluru, India</p>
+<nav aria-label="Sections">
+<a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#background">Background</a><a href="#contact">Contact</a>
+</nav>
+<div class="ext">
+<a href="mailto:shayash480@gmail.com">Email</a>
+<a href="https://github.com/YashSharma-bit">GitHub</a>
+<a href="https://linkedin.com/in/yash-sharma-974b0933b">LinkedIn</a>
+</div>
+<button id="theme" type="button" aria-label="Switch light or dark theme">Switch theme</button>
+</aside>
+
+<main>
+<section id="about">
+<p class="lede">I build backend services in Java and Python, and I care most about the parts that keep a system secure and tested.</p>
+<p>I’m a Computer Science and Data Science undergraduate at B.M.S. College of Engineering (B.E., expected 2027). My projects cover an identity and access management platform, a full-stack web app with CI, and a deep learning pipeline that reads ancient Brahmi manuscripts.</p>
+</section>
+
+<section class="demo" aria-labelledby="dt">
+<h2 id="dt">Try a brute-force attack</h2>
+<p>A simplified simulation of the rate limiting and audit logging idea in SecureGate. The limit here is 5 failed attempts. It is an illustration, not the project’s code.</p>
+<div class="row">
+<button class="b" id="go" type="button">Sign in with a wrong password</button>
+<button class="b alt" id="reset" type="button">Reset</button>
+</div>
+<pre id="log" aria-live="polite">No attempts yet.</pre>
+<div id="status"></div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<article class="proj">
+<h3>SecureGate: zero-trust identity and access management</h3>
+<div class="meta">Java, Spring Boot, React, PostgreSQL, Redis</div>
+<ul>
+<li>Built an identity and access management platform with JWT authentication, refresh token rotation and MFA.</li>
+<li>Implemented RBAC and ABAC with Spring Security on a zero-trust model.</li>
+<li>Added session management, device verification and rate limiting against unauthorized access and brute-force attacks.</li>
+<li>Added centralized audit logging and suspicious-login detection.</li>
+<li>Containerized the services with Docker and automated tests and CI/CD with GitHub Actions.</li>
+</ul>
+<ul class="tags"><li>JWT</li><li>MFA</li><li>RBAC</li><li>ABAC</li><li>Docker</li><li>GitHub Actions</li></ul>
+</article>
+
+<article class="proj">
+<h3>Brahmi manuscript recognition</h3>
+<div class="meta">Python, CNN, OCR, OpenCV</div>
+<p>A deep learning pipeline that recognizes characters in scanned Brahmi manuscripts and outputs digital text.</p>
+<div class="pipe" role="img" aria-label="Pipeline: scanned image, noise removal, character segmentation, CNN classifier with OCR, digital text">
+<span>Scanned image</span><i>→</i><span>Noise removal (OpenCV)</span><i>→</i><span>Character segmentation</span><i>→</i><span>CNN classifier + OCR</span><i>→</i><span>Digital text</span>
+</div>
+<ul>
+<li>Used OpenCV for noise removal and character segmentation before recognition.</li>
+<li>Trained a CNN classifier and combined it with OCR to produce the text.</li>
+<li>Co-authored <em>Handmade India</em>, a research report on deep learning OCR and transliteration of Brahmi, with peers under a faculty guide.</li>
+</ul>
+</article>
+
+<article class="proj">
+<h3>Full-stack task management app</h3>
+<div class="meta">React, Flask, PostgreSQL, GitHub Actions</div>
+<ul>
+<li>Built a React front end, a Flask REST API and a PostgreSQL database with user accounts and CRUD operations.</li>
+<li>Wrote unit tests for the API endpoints; GitHub Actions runs them on every push.</li>
+<li>Worked in feature branches with pull requests and code review.</li>
+</ul>
+</article>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<dl>
+<dt>Languages</dt><dd>Python, Java, SQL, JavaScript</dd>
+<dt>Web and databases</dt><dd>React, Spring Boot, Flask, REST APIs, PostgreSQL, MongoDB, Redis</dd>
+<dt>AI and data</dt><dd>CNN-based deep learning, OCR, OpenCV, image preprocessing, pandas, NumPy</dd>
+<dt>Security and DevOps</dt><dd>Spring Security, JWT, RBAC, ABAC, MFA, Docker, GitHub Actions</dd>
+<dt>Practices</dt><dd>Git and GitHub, unit testing, debugging, OOP, Agile</dd>
+</dl>
+</section>
+
+<section id="background">
+<h2>Background</h2>
+<dl>
+<dt>2023 – 2027 (expected)</dt><dd><strong>B.M.S. College of Engineering, Bengaluru.</strong> B.E. in Computer Science and Data Science.</dd>
+<dt>July 2025</dt><dd><strong>Small Arms Factory, IT and Communication Section.</strong> Summer trainee in IT systems, networking and communication infrastructure.</dd>
+<dt>Courses</dt><dd>Introduction to Machine Learning and Data Science with Python, both independent.</dd>
+</dl>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email me at <a href="mailto:shayash480@gmail.com">shayash480@gmail.com</a> or message me on <a href="https://linkedin.com/in/yash-sharma-974b0933b">LinkedIn</a>. My code is on <a href="https://github.com/YashSharma-bit">GitHub</a>.</p>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+var MAX=5,n=0,lines=[],log=document.getElementById('log'),st=document.getElementById('status'),go=document.getElementById('go');
+function t(){return new Date().toTimeString().slice(0,8)}
+go.addEventListener('click',function(){
+n++;lines.push(t()+'  FAILED_LOGIN  attempt '+n+' of '+MAX);
+if(n<MAX){st.style.color='var(--mute)';st.textContent='Wrong password. '+(MAX-n)+' attempts left.'}
+else{lines.push(t()+'  ACCOUNT_LOCKED  suspicious activity flagged');st.style.color='var(--bad)';st.textContent='Account locked. Wait before trying again.';go.disabled=true}
+log.textContent=lines.join('\n')});
+document.getElementById('reset').addEventListener('click',function(){n=0;lines=[];go.disabled=false;log.textContent='No attempts yet.';st.textContent=''});
+
+var root=document.documentElement;
+try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+document.getElementById('theme').addEventListener('click',function(){
+var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+try{localStorage.setItem('theme',next)}catch(e){}});
+
+var links=[].slice.call(document.querySelectorAll('nav a')),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-30% 0px -60% 0px'});
+secs.forEach(function(s){io.observe(s)})}
+})();
+</script>
+</body>
+</html>
